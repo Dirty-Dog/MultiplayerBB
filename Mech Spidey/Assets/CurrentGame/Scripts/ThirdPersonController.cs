@@ -17,6 +17,13 @@ namespace StarterAssets
         PhotonView view;
 
         public bool isTurret;
+        public GameObject DISoldPlayer;
+        public GameObject DISPlayerFollowCamera;
+        public GameObject DISmainCamera;
+        public GameObject DISCameraRoot;
+        public GameObject DISGeometry;
+        public GameObject DISSkeleton;
+        public GameObject Turret;
 
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
@@ -173,16 +180,18 @@ namespace StarterAssets
 
                 if (!isTurret)
                 {
+                    turretMovementsNotAllow();
                     _hasAnimator = TryGetComponent(out _animator);
 
                     JumpAndGravity();
                     GroundedCheck();
                     Move();
+
                 }
 
                 else if (isTurret)
                 {
-
+                    turretMovementsAllow();
                 }
 
                 
@@ -453,13 +462,44 @@ namespace StarterAssets
         }
 
         ///////////////////////////////////Turret Code///////////////////////////////////////
+
         
-        public void turretMovements()
+
+        public void turretMovementsAllow()
         {
             /////drop turret transform animation
-            /////disable player armature body
-            /////enable turret game object
+
+            DISoldPlayer.SetActive(false);
+            DISPlayerFollowCamera.SetActive(false);
+            DISmainCamera.SetActive(false);
+            DISCameraRoot.SetActive(false);
+            DISGeometry.SetActive(false);
+            DISSkeleton.SetActive(false);
+            Turret.SetActive(true);
+
+
+
             
+
+
+        }
+
+        public void turretMovementsNotAllow()
+        {
+            /////drop turret transform animation
+
+            DISoldPlayer.SetActive(true);
+            DISPlayerFollowCamera.SetActive(true);
+            DISmainCamera.SetActive(true);
+            DISCameraRoot.SetActive(true);
+            DISGeometry.SetActive(true);
+            DISSkeleton.SetActive(true);
+            Turret.SetActive(false);
+
+
+
+
+
 
         }
     }

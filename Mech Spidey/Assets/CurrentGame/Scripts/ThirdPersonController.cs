@@ -20,7 +20,7 @@ namespace StarterAssets
         public GameObject DISoldPlayer;
         public GameObject DISPlayerFollowCamera;
         public GameObject DISmainCamera;
-       public GameObject DISCameraRoot;
+        public GameObject DISCameraRoot;
         public GameObject DISGeometry;
         public GameObject DISSkeleton;
         public GameObject Turret;
@@ -175,7 +175,6 @@ namespace StarterAssets
 
         private void Update()
         {
-            
             if (view.IsMine)
             {   
 

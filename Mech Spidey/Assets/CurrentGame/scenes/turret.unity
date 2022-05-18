@@ -330,6 +330,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &742459842 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1017215835626214242, guid: 77c49800f3de18247b3a42c9ad741b11, type: 3}
+  m_PrefabInstance: {fileID: 1012397019278630156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1567936729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,7 +1314,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1073528730759163864, guid: 77c49800f3de18247b3a42c9ad741b11, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148105927108651054, guid: 77c49800f3de18247b3a42c9ad741b11, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759553573611897859, guid: 77c49800f3de18247b3a42c9ad741b11, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 1875880203136484862, guid: 3c7856de6dcdba445aaf67a0d1e61a79, type: 3}
+    - target: {fileID: 7759553573611897859, guid: 77c49800f3de18247b3a42c9ad741b11, type: 3}
+      propertyPath: muzzel
+      value: 
+      objectReference: {fileID: 742459842}
+    - target: {fileID: 7759553573611897859, guid: 77c49800f3de18247b3a42c9ad741b11, type: 3}
+      propertyPath: canShoot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759553573611897859, guid: 77c49800f3de18247b3a42c9ad741b11, type: 3}
+      propertyPath: bulletaudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a0a824e5785b3436886b35bd41079060, type: 3}
+    m_RemovedComponents:
+    - {fileID: 1124631815134169452, guid: 77c49800f3de18247b3a42c9ad741b11, type: 3}
+    - {fileID: 1148105927108651054, guid: 77c49800f3de18247b3a42c9ad741b11, type: 3}
+    - {fileID: 1073528730759163864, guid: 77c49800f3de18247b3a42c9ad741b11, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 77c49800f3de18247b3a42c9ad741b11, type: 3}
 --- !u!1 &1044855453635465674
 GameObject:
@@ -4457,6 +4489,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTurret: 0
+  DISoldPlayer: {fileID: 0}
+  DISPlayerFollowCamera: {fileID: 0}
+  DISmainCamera: {fileID: 0}
+  DISCameraRoot: {fileID: 0}
+  DISGeometry: {fileID: 0}
+  DISSkeleton: {fileID: 0}
+  Turret: {fileID: 0}
   MoveSpeed: 20
   SprintSpeed: 40
   RotationSmoothTime: 0.12
